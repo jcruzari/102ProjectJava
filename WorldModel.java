@@ -6,6 +6,7 @@ public class WorldModel
 {
    private Background[][] background;
    private WorldEntity[][] occupancy;
+   protected Boolean visited[][];
    private List<WorldEntity> entities;
    private int numRows;
    private int numCols;
@@ -15,6 +16,7 @@ public class WorldModel
    {
       this.background = new Background[numRows][numCols];
       this.occupancy = new WorldEntity[numRows][numCols];
+      this.visited = new Boolean[numRows][numCols];
       this.numRows = numRows;
       this.numCols = numCols;
       this.entities = new LinkedList<>();
@@ -177,12 +179,12 @@ public class WorldModel
       return dx * dx + dy * dy;
    }
 
-   private static <T> T getCell(T[][] grid, Point pt)
+   protected static <T> T getCell(T[][] grid, Point pt)
    {
       return grid[pt.y][pt.x];
    }
 
-   private static <T> void setCell(T[][] grid, Point pt, T v)
+   protected static <T> void setCell(T[][] grid, Point pt, T v)
    {
       grid[pt.y][pt.x] = v;
    }
