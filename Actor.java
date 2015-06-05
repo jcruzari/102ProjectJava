@@ -2,7 +2,7 @@ import processing.core.PImage;
 import java.util.List;
 import java.util.LinkedList;
 
-public abstract class Actor
+public abstract class  Actor
    extends WorldEntity
 {
    private int rate;

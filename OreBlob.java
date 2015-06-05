@@ -69,7 +69,7 @@ public class OreBlob
       return action[0];
    }
 
-   private Quake createQuake(WorldModel world, Point pt, long ticks,
+   public static Quake createQuake(WorldModel world, Point pt, long ticks,
       ImageStore imageStore)
    {
       Quake quake = new Quake("quake", pt, QUAKE_ANIMATION_RATE,

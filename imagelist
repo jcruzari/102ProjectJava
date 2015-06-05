@@ -12,6 +12,7 @@ blob images/blob10.bmp 255 255 255 0
 blob images/blob11.bmp 255 255 255 0
 blob images/blob12.bmp 255 255 255 0
 grass images/grass.bmp
+lava images/lava.bmp
 miner images/miner1.bmp 252 252 252 0
 miner images/miner2.bmp 252 252 252 0
 miner images/miner3.bmp 252 252 252 0
@@ -27,4 +28,12 @@ quake images/quake5.bmp 255 255 255 0
 quake images/quake6.bmp 255 255 255 0
 rocks images/rock.bmp
 vein images/vein.bmp
+wyvern images/wyvern1.bmp 255 255 255 0
+wyvern images/wyvern2.bmp 255 255 255 0
+wyvern images/wyvern3.bmp 255 255 255 0
+wyvern images/wyvern4.bmp 255 255 255 0
+wyvern images/wyvern5.bmp 255 255 255 0
+wyvern images/wyvern6.bmp 255 255 255 0
+wyvern images/wyvern7.bmp 255 255 255 0
+wyvern images/wyvern8.bmp 255 255 255 0
 background_default images/none.bmp

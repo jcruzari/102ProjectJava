@@ -9,6 +9,7 @@ import java.io.File;
 
 public class Main extends PApplet
 {
+   int dx, dy;
    private static final int WORLD_WIDTH_SCALE = 2;
    private static final int WORLD_HEIGHT_SCALE = 2;
 
@@ -70,6 +71,7 @@ public class Main extends PApplet
          next_time = time + TIMER_ACTION_DELAY;
       }
 
+
       view.drawViewport();
    }
 
@@ -77,8 +79,8 @@ public class Main extends PApplet
    {
       if (key == CODED)
       {
-         int dx = 0;
-         int dy = 0;
+         dx = 0;
+         dy = 0;
          switch (keyCode)
          {
             case UP:
@@ -98,6 +100,30 @@ public class Main extends PApplet
       }
    }
 
+   public void mousePressed(){
+      Actor wyv = new Wyvern("wyvern", new Point(mouseX/32, mouseY/32), 40, 100, imageStore.get("wyvern"));
+      //wyv.createAction(world, imageStore);
+      Background bgnd = new Background("lava", imageStore.get("lava"));
+      Action[] action = {null};
+      action[0] = ticks ->{
+         for(int y = mouseY; y < mouseY+4*32; y++){
+            for(int x = mouseX; x < mouseX+4*32; x++){
+
+               world.setBackground(new Point(x/32, y/32), bgnd);
+            }
+         }
+         //world.scheduleAction(action[0], 0);
+      };
+
+
+
+
+      world.scheduleAction(action[0], 0);
+      //wyv.schedule(world, 0, imageStore);
+      world.addEntity(wyv);
+
+   }
+
    private static Background createDefaultBackground(ImageStore imageStore)
    {
       List<PImage> bgndImgs = imageStore.get(DEFAULT_IMAGE_NAME);
@@ -115,7 +141,6 @@ public class Main extends PApplet
       img.updatePixels();
       return img;
    }
-
 
    private static void loadImages(String filename, ImageStore imageStore,
       PApplet screen)
