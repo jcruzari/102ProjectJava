@@ -62,7 +62,7 @@ public abstract class Miner
       return action[0];
    }
 
-   private Miner tryTransform(WorldModel world)
+   public Miner tryTransform(WorldModel world)
    {
       Miner newEntity = transform(world);
       if (this != newEntity)

@@ -11,6 +11,10 @@ blob images/blob9.bmp 255 255 255 0
 blob images/blob10.bmp 255 255 255 0
 blob images/blob11.bmp 255 255 255 0
 blob images/blob12.bmp 255 255 255 0
+fire images/fire1.bmp 252 252 252 0
+fire images/fire2.bmp 252 252 252 0
+fire images/fire3.bmp 252 252 252 0
+fire images/fire4.bmp 252 252 252 0
 grass images/grass.bmp
 lava images/lava.bmp
 miner images/miner1.bmp 252 252 252 0

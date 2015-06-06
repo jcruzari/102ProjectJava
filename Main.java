@@ -108,10 +108,10 @@ public class Main extends PApplet
       Background bgnd = new Background("lava", imageStore.get("lava"));
       Action[] action = {null};
       action[0] = ticks ->{
-         for(int y = mouseY; y < mouseY+4*32; y++){
-            for(int x = mouseX; x < mouseX+4*32; x++){
+         for(int y = viewPt.y-2; y < viewPt.y+2; y++){
+            for(int x = viewPt.x-2; x < viewPt.x+2; x++){
 
-               world.setBackground(new Point(x/32, y/32), bgnd);
+               world.setBackground(new Point(x, y), bgnd);
             }
          }
          //world.scheduleAction(action[0], 0);

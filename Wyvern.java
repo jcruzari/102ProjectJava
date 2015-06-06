@@ -18,6 +18,9 @@ public class Wyvern extends MobileAnimatedActor{
 
             if(move(world, target)){
                Quake quake = OreBlob.createQuake(world, tPt, ticks, imageStore);
+               Actor burn = new MinerBurning("fire", tPt, 100, 800, 0, 0, Obstacle.class, imageStore.get("fire"));
+               world.addEntity(burn);
+               burn.schedule(world, 0, imageStore);
                world.addEntity(quake);
             }
          }
