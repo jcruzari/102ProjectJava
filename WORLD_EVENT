@@ -1,0 +1,6 @@
+How to trigger:
+Click left mouse button.
+
+Spawns a wyvern and a 4x4 grid of lava. Wyvern chases after miners and when
+it reaches them, turns them into quakes (picks them up leaving a gust of 
+wind). 

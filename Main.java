@@ -101,7 +101,9 @@ public class Main extends PApplet
    }
 
    public void mousePressed(){
-      Actor wyv = new Wyvern("wyvern", new Point(mouseX/32, mouseY/32), 40, 100, imageStore.get("wyvern"));
+      Point viewPt = WorldView.viewportToWorld(view.viewport, mouseX/32, mouseY/32);
+
+      Actor wyv = new Wyvern("wyvern", viewPt, 800, 80, imageStore.get("wyvern"));
       //wyv.createAction(world, imageStore);
       Background bgnd = new Background("lava", imageStore.get("lava"));
       Action[] action = {null};
@@ -119,7 +121,7 @@ public class Main extends PApplet
 
 
       world.scheduleAction(action[0], 0);
-      //wyv.schedule(world, 0, imageStore);
+      wyv.schedule(world, 0, imageStore);
       world.addEntity(wyv);
 
    }

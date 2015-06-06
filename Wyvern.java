@@ -21,7 +21,7 @@ public class Wyvern extends MobileAnimatedActor{
                world.addEntity(quake);
             }
          }
-         scheduleAction(world, this, createAction(world, imageStore), 100);
+         scheduleAction(world, this, createAction(world, imageStore), nextTime);
       };
       return action[0];
    }
